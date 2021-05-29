@@ -15,16 +15,52 @@ $(document).ready(function () {
     $(this).next('.qa-content').slideToggle();
 })
 
-    //注意事項
-    // $('#notice .notice-content').hide();
-    // $('#notice .title').click(function () {
-    //     $(this).next('#notice .notice-content').slideToggle();
-    //     if ($('#notice .title').html() == "注意事項 +") {
-    //         $('#notice .title').html("注意事項 －")
-    //     } else (
-    //         $('#notice .title').html("注意事項 +")
-    //     )
-    // })
+ //slick
+ $(".center1").slick({
+    autoplaySpeed:1500,
+    arrows: false,
+    autoplay:true,
+    dots: true,
+    infinite: false,
+    // centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [{
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ],
+
+});
+
+$(".center2").slick({
+    autoplaySpeed:1500,
+    dots: true,
+    autoplay:true,
+    infinite: false,
+    // centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [{
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false,
+            }
+        }
+    ],
+
+});
+
+$("#product-data-tabs-control  li").on("click",function(){ 
+    $(".center1").slick('refresh');
+    $(".center2").slick('refresh');
+ });
+ 
 
     //tab
     var tabControls = jQuery('#product-data-tabs-control li');
@@ -40,7 +76,8 @@ $(document).ready(function () {
         }
     });
 
-    tabTriggers.each(function () {
+    tabTriggers.each(function (input) {
+
         var tab = jQuery(jQuery(this).attr('href')),
             parent = jQuery(this).parent();
         jQuery(this).click(function (e) {
