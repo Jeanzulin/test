@@ -167,7 +167,7 @@ $("#product-data-tabs-control  li").on("click",function(){
                 new_top[0] = new_top[1];
                 $('header').removeClass('mystyle'); /* 移除選單固定效果 */
                 $('header').css({
-                    'top': -100,
+                   
                     'position': 'fixed'
                 });
             }
@@ -188,7 +188,7 @@ $("#product-data-tabs-control  li").on("click",function(){
                 function_nav.removeClass('function_nav_close')
                 nav_wrap.removeClass('nav_wrap_close')
                 $('header').css({
-                    'top': -100,
+                 
                     'position': 'static'
                 });
             }
