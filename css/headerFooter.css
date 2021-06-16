@@ -145,7 +145,10 @@ nav ul {
   background: #009d95;
   color: #fff !important;
   padding: 8px 24px;
-  border-radius: 25px; }
+  border-radius: 25px; 
+margin: 0 auto;
+  margin-top: 32px;
+}
   .btn_join:hover {
     color: #fff; }
   .btn_join img {
@@ -223,7 +226,7 @@ z-index: 102;}
       vertical-align: middle; }
       .function_nav ul li a {
         display: block;
-        padding: 1em 8px;
+        /* padding: 1em 8px; */
         font-size: 18px; }
 
 .function_nav_close {
@@ -448,7 +451,7 @@ footer {
         margin-left: 10px; }
   .nav_wrap {
     position: absolute;
-    bottom: calc(0px + 40px);
+    top: 5%;
     width: 100%; }
   .nav_wrap_pc {
     display: none; }
